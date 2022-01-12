@@ -3,6 +3,7 @@
 * [General info](#general-info)
 * [Framework](#framework)
 * [Requirements](#requirements)
+* [Code description](#code-description)
 * [Setup](#setup)
 
 ## General info
@@ -25,6 +26,12 @@ The following setup is required to run the repository:
 * tensorflow 1.14.0
 
 Please note that, it is recommended to create a virtual environment where you can install the required python packages and use it for this project.
+
+## Code description
+The code is structured into four ros packages as follows:
+* `rosbot_srl` package includes the scripts responsible for defining the networks architecture for RL and SRL algorithms, besides auxiliary scripts for logging and plotting training results.
+* `openai_ros` package includes scripts that define the virtual training and environments and control the motion of the robot.
+* `turtlebot3_gazebo` and `turtlebot3_description` packages include scripts that define the model of the robot and gazebo world files.
 	
 ## Setup
 To run this project, please follow this set of instructions:
