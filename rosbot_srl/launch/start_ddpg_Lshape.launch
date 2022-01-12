@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- This version uses the openai_ros environments -->
+    <rosparam command="load" file="$(find rosbot_srl)/config/rosbot_srl_Lshape.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="rosbot_srl" name="navigation_ddpglearn" type="start_DDPG.py" output="screen"/>
+</launch>

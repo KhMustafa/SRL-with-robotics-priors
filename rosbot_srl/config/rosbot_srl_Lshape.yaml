@@ -1,0 +1,41 @@
+husarion: #namespace
+
+    nepisodes: 600 # Total amount of episodes
+    nsteps: 800 # Maximal amount of steps in each episode
+    nepisode_srl_update: 400 # After how much updates the SRL gets updated
+    nsrlupdates: 8 # Amount of times the training data is passed trough a srl training cycle
+    
+    n_actions: 2 # Forwards,TurnLeft,TurnRight, Backwards
+    init_linear_forward_speed: 0.0 # Initial linear speed in which we start each episode
+    init_linear_turn_speed: 0.0 # Initial angular speed in shich we start each episode
+
+    desired_pose:
+      x: 2.75
+      y: -2.25
+
+    precision: 2 # Number of decimals that we will accept in all sensor readings
+    
+    work_space: # 2D cube in which Husarion Cant surpass.
+      x_max: 30.0
+      x_min: -30.0
+      y_max: 30.0
+      y_min: -30.0
+
+    move_base_precision: 0.05 # !!WE USE TIME BASED NOW!!!!!low this difference between the asked linear speed and the real one. Note  that angular is not because controller is too imprecise in sim.
+    
+    min_forward_speed: -0.2
+    max_forward_speed: 0.2
+    min_ang_speed:     -0.1
+    max_ang_speed:     0.1
+
+    new_ranges: 40 # How many laser readings we jump in each observation reading, the bigger the less laser resolution
+    max_laser_value: 10.0 # Value considered Ok, no wall
+    min_laser_value: 0.26 #0.26# laser value at which collision is triggered
+    
+    distance_multiplier: 0.2 # Multplying of distance to the target before entering the exponential
+    alive_reward: 0 # Point we give to just not not end the episode
+    end_episode_points: 20 # Points given when ending an episode
+    rewarding_factor: 50
+
+
+
