@@ -34,7 +34,7 @@ $ mkdir -p ~/<your ros workspace>/src
 $ cd ~/<your ros workspace>/
 $ catkin build
 ```
-* clone the project into the src directory, and build it.
+* clone the project into the src directory, and build it. Please note that all the required packages to run the project are included in the repository and no additional external packages are required.
 ```
 $ git clone https://github.com/KHALEDALAAELDIN/Low-Dimensional-State-Representation-Learning-with-Robotics-Priors.git
 $ catkin build
